@@ -12,10 +12,10 @@ class Address:
     def __str__(self):
         return f"Address: {self.housenumber} {self.street}, {self.city}, {self.state}, {self.zipcode}, {self.referralregion}"
 
-df = pd.read_csv('inpatientCharges.csv', sep=';', low_memory=False)
+df1 = pd.read_csv('inpatientCharges.csv', sep=';', low_memory=False)
 
 addresses = []
-for index, row in df.iterrows():
+for index, row in df1.iterrows():
     state = row['Provider State']
     city = row['Provider City']
     street = row['Provider Street Address']
